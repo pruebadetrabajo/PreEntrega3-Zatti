@@ -1,0 +1,37 @@
+@mixin  border {
+    border: solid 2px rgb(213, 228, 255);
+}
+@mixin flex {
+    display: flex;
+    @include border;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+  }
+
+@mixin animacion ($w, $h, $d) {
+    width: $w;
+    height: $h;
+    animation-name: imagenMovimiento;
+    animation-iteration-count: infinite;
+    animation-duration: $d;
+    animation-direction: alternate-reverse;
+
+}  
+
+@mixin temp {
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+}
+
+@mixin borderBack{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 
+    0.3em 0.3em 1em rgba(0,0,0,0.1);
+}

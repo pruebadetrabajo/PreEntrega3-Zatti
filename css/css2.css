@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   
+}
+
+.body {
+    background: linear-gradient(rgb(178, 222, 249),30%, rgb(255, 255, 255));
+ }
+ 
+
+.contenedorIndex {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+/* .body.body {
+    overflow-x: hidden;
+    font-family: 'Noto Sans Display', sans-serif;
+    min-height: max-content;
+}*/
+
+.contenedorHeader {
+    display: flex;
+    border: solid 2px rgb(213, 228, 255);
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    justify-items: center;
+}
+
+.imgLogo {
+    width: 150px;
+}
+
+.logo {
+    width: 20%;
+}
+
+.buscador {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: center;
+}
+
+input {
+    border: solid 1px rgb(157, 188, 241);
+    border-radius: 7px;
+    height: 27px;
+}
+
+.lupa {
+    width: 30px;
+}
+/*----------------------------------------------*/
+
+.noticias {
+    border: solid 2px rgb(213, 228, 255);
+
+}
+
+.indiceAireIMG {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+}
+
+.nivel {
+    width: 70px;
+    height: 46px;
+
+}
+
+.alergias {
+    width: 68px;
+    height: 63px;
+
+}
+
+
+.homeDiaHoy {
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 25px;
+    display: flex;
+
+}
+
+.homeDiaHoyIzq {
+    width: 50%;
+    /*background-color: rgb(238, 143, 1);*/
+    text-align: left;
+}
+
+.temp {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+
+.h1Temp {
+    flex: auto;
+    text-align: center;
+}
+
+
+
+.homeDiaHoyDer {
+    width: 50%;
+    /*background-color: antiquewhite;*/
+    text-align: right;
+}
+
+/*------------------MENSUAL------------*/
+.diaMes {
+    width: 14%;
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 15px 0;
+    text-align: center;
+}
+/*-------------------------*/
+
+.mtnm {
+    display: flex;
+    justify-content: center;
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 15px 0;
+    /* gap: 10%;*/
+
+}
+
+.climaImg {
+    width: 45px;
+    height: 45px;
+    animation-name: imagenMovimiento;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+}
+
+
+.climaImgDias {
+    width: 55px;
+    height: 55px;
+    animation-name: imagenMovimiento;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+}
+
+.gotas {
+    width: 15px;
+    height: 15px;
+    animation-name: imagenMovimiento;
+    animation-iteration-count: infinite;
+    animation-duration: 0.3s;
+    animation-direction: alternate-reverse;
+}
+
+
+
+.tarde,
+.noche,
+.madrugada {
+    border-left: solid 2px rgb(213, 228, 255);
+}
+
+.mtnm>div {
+    /*   display: inline;*/
+    text-align: center;
+    width: 25%;
+
+}
+
+.mapa {
+    padding: 5px;
+}
+
+
+
+
+/*-----dias----------------------------------------------*/
+
+.contenedorDias {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "header"
+        "main"
+        "tabla"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.mainDias,
+.mainSemanas {
+    grid-area: main;
+    display: flex;
+}
+
+.diaPorDia {
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 5px;
+    grid-area: tabla;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.dia {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.boderB {
+    border-bottom: 1px solid rgb(213, 228, 255);
+    margin-bottom: 10px;
+}
+
+.dia>span {
+    flex: auto;
+}
+
+.dia>div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.imgDiaPorDia {
+    width: 29px;
+}
+
+.diasDiaHoy,
+.diasDiaManana {
+    border: solid 2px rgb(213, 228, 255);
+    margin: 5px;
+    padding: 25px;
+    display: flex;
+    width: 50%;
+}
+
+.diasDiaHoyIzq,
+.diasDiaMananaIzq {
+    width: 50%;
+    text-align: left;
+}
+
+.diasDiaHoyDer,
+.diasDiaMananaDer {
+    width: 50%;
+    text-align: right;
+}
+
+.diadeHoy>div {
+    display: inline;
+}
+
+.diadeManana>div {
+    display: inline;
+}
+
+/*----------------------------*/
+.footer {
+    text-align: center;
+    padding: 15px;
+    grid-area: footer;
+    background-color: rgb(157, 188, 241);
+}
+
+
+/*-semana- */
+
+.contenedorSemana {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "header"
+        "main"
+        "semana"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+}
+.mainSemanas {
+    grid-area: main;
+}
+.listaSemana {
+    grid-area: semana;
+}
+.footer {
+    grid-area: footer;
+}
+
+/*-mensual-*/
+
+.contenedorMensual {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "header"
+        "main"
+        "mes"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+}
+.mainDias {
+    grid-area: main;
+}
+.calendario {
+    grid-area: mes;
+}
+.footer {
+    grid-area: footer;
+}
+
+/*-mapa-*/
+
+.contenedorMapa {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "header"
+        "main"
+        "mapa"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+}
+.mainDias {
+    grid-area: main;
+}
+.mapa {
+    grid-area: mapa;
+}
+.footer {
+    grid-area: footer;
+}
+
+
+
+
+
+/*---puro movimiento-*/
+
+@keyframes imagenMovimiento {
+    to {
+        transition: scale(0.7);
+    }
+
+    from {
+        transform: scale(1.2);
+    }
+
+}
+
+/*--mwdia screen--*/
+
+@media screen and (max-width:992px) {
+
+    .contenedorIndex {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .homeDiaHoy {
+        padding: 10px;
+    }
+
+    .imgLogo {
+        width: 85px;
+    }
+
+    input {
+        width: 35%;
+    }
+
+    .mtnm>div>h3 {
+        font-size: 1em;
+    }
+
+    .mainDias {
+        display: block;
+    }
+
+    .diasDiaHoy,
+    .diasDiaManana {
+        width: auto;
+    }
+
+
+}

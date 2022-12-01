@@ -1,0 +1,346 @@
+*, p, h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center; }
+
+.body {
+  background: linear-gradient(#b2def9, 30%, white); }
+
+.contenedorIndex {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "header header" "main sidebar" "footer footer"; }
+  .contenedorIndex .header {
+    grid-area: header; }
+  .contenedorIndex .main {
+    grid-area: main; }
+  .contenedorIndex .sidebar {
+    grid-area: sidebar; }
+  .contenedorIndex .footer {
+    grid-area: footer; }
+
+.header .contenedorHeader {
+  display: flex;
+  border: solid 2px #d5e4ff;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  justify-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1); }
+  .header .contenedorHeader .titulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 15px;
+    padding-left: 10px; }
+  .header .contenedorHeader .logo {
+    width: 20%; }
+    .header .contenedorHeader .logo .imgLogo {
+      width: 150px; }
+  .header .contenedorHeader .buscador {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: center; }
+
+.main .contenedorDatos .homeDiaHoy {
+  border: solid 2px #d5e4ff;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+  padding: 10px 35px;
+  margin: 5px;
+  display: flex; }
+
+.main .contenedorDatos .mtnm {
+  border: solid 2px #d5e4ff;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center; }
+  .main .contenedorDatos .mtnm .tarde,
+  .main .contenedorDatos .mtnm .noche,
+  .main .contenedorDatos .mtnm .madrugada {
+    border-left: #d5e4ff; }
+
+.main .contenedorDatos .mtnm > div {
+  text-align: center;
+  width: 25%; }
+
+.mapa {
+  margin: 15PX 7PX;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1); }
+
+.homeDiaHoyIzq {
+  width: 50%;
+  text-align: left; }
+  .homeDiaHoyIzq .temp {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+    justify-items: center;
+    text-align: center; }
+    .homeDiaHoyIzq .temp .h1Temp {
+      flex: auto;
+      text-align: center; }
+
+.homeDiaHoyDer {
+  width: 50%;
+  text-align: right; }
+
+.climaImg {
+  width: 55px;
+  height: 55px;
+  animation-name: imagenMovimiento;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate-reverse; }
+
+.gotas {
+  width: 15px;
+  height: 15px;
+  animation-name: imagenMovimiento;
+  animation-iteration-count: infinite;
+  animation-duration: 0.3s;
+  animation-direction: alternate-reverse; }
+
+.sidebar .contenedorNoticias .noticias {
+  border: solid 2px #d5e4ff;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 15px; }
+  .sidebar .contenedorNoticias .noticias .indiceAireIMG {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center; }
+    .sidebar .contenedorNoticias .noticias .indiceAireIMG .nivel {
+      width: 70px;
+      height: 46px; }
+    .sidebar .contenedorNoticias .noticias .indiceAireIMG .alergias {
+      width: 68px;
+      height: 63px; }
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  grid-area: footer;
+  background-color: #9dbcf1; }
+  .footer .linkFooter {
+    text-decoration: none; }
+
+/*--------*/
+@keyframes imagenMovimiento {
+  to {
+    transition: scale(0.7); }
+  from {
+    transform: scale(1.2); } }
+
+/*-----DIAS------*/
+.contenedorDias {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "main" "tabla" "footer"; }
+  .contenedorDias .header {
+    grid-area: header; }
+  .contenedorDias .mainDias,
+  .contenedorDias .mainSemanas {
+    grid-area: main;
+    display: flex; }
+  .contenedorDias .diaPorDia {
+    border: solid 2px #d5e4ff;
+    margin: 5px;
+    padding: 5px;
+    grid-area: tabla; }
+  .contenedorDias .diaPorDia {
+    border: solid 2px #d5e4ff;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+    margin-bottom: 35PX; }
+    .contenedorDias .diaPorDia .dia {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      text-align: center; }
+      .contenedorDias .diaPorDia .dia span {
+        flex: auto; }
+    .contenedorDias .diaPorDia .boderB {
+      border-bottom: 1px solid #d5e4ff;
+      margin-bottom: 10px; }
+
+.diasDiaHoy {
+  border: solid 2px #d5e4ff;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 10PX 15px;
+  display: flex;
+  width: 50%; }
+
+.diasDiaHoyIzq {
+  width: 50%;
+  text-align: left; }
+
+.temp {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+  justify-items: center;
+  text-align: center; }
+  .temp .h1Temp {
+    flex: auto;
+    text-align: center; }
+
+.diasDiaHoyDer {
+  width: 50%;
+  text-align: right; }
+
+.diasDiaManana {
+  border: solid 2px #d5e4ff;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 10PX 15px;
+  display: flex;
+  width: 50%; }
+  .diasDiaManana .diasDiaMananaIzq {
+    width: 50%;
+    text-align: left; }
+  .diasDiaManana .temp {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+    justify-items: center;
+    text-align: center; }
+    .diasDiaManana .temp .h1Temp {
+      flex: auto;
+      text-align: center; }
+  .diasDiaManana .diasDiaMananaDer {
+    width: 50%;
+    text-align: right; }
+
+/*---------SEMANA--------------*/
+.contenedorSemana {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "main" "semana" "footer"; }
+
+.header {
+  grid-area: header; }
+
+.mainSemanas {
+  grid-area: main;
+  display: flex; }
+
+.listaSemana {
+  grid-area: semana;
+  margin-bottom: 15PX; }
+
+.footer {
+  grid-area: footer; }
+
+.diaPorDia {
+  border: solid 2px #d5e4ff;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 2PX 35px; }
+
+.mainDias {
+  display: flex; }
+
+/*---------MES--------------*/
+.calendario .semana .diaMes {
+  box-sizing: border-box;
+  width: 14%;
+  height: min-content;
+  border: solid 2px #d5e4ff;
+  margin: 3px;
+  padding: 5px 0;
+  text-align: center; }
+
+/*--mwdia screen--*/
+@media screen and (max-width: 992px) {
+  .contenedorIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "main" "sidebar" "footer"; }
+  .titulo {
+    font-size: 1.6em; }
+  .header {
+    grid-area: header; }
+  .main {
+    grid-area: main; }
+  .sidebar {
+    grid-area: sidebar; }
+  .footer {
+    grid-area: footer; }
+  .homeDiaHoy {
+    padding: 10px; }
+  .imgLogo {
+    width: 75px !important; }
+  input {
+    width: 35%;
+    border: solid 1px gray;
+    border-radius: 10px; }
+  .mtnm > div > h3 {
+    font-size: 1em; }
+  .mainDias {
+    display: block !important; }
+  .diasDiaHoy,
+  .diasDiaManana {
+    width: auto; }
+  .diaMes > h3, .diaMes > div > h3 {
+    font-size: 1em !important; }
+  .diaMes > div > img {
+    width: 33px; } }
+
+@media screen and (max-width: 590px) {
+  .titulo {
+    font-size: 1.1em;
+    padding-left: 5px !important; }
+  h3 {
+    font-size: 0.8em !important; }
+  .mtnm > div > p {
+    font-size: 0.7em !important; }
+  .homeDiaHoy, .diasDiaHoy, .diasDiaMananaIzq, .diasDiaManana {
+    display: block !important; }
+  .homeDiaHoyIzq, .diasDiaHoyIzq, .diasDiaHoyDer, .diasDiaMananaDer, .diasDiaMananaIzq, .homeDiaHoyDer, .mainSemanas {
+    display: block;
+    width: 100% !important;
+    text-align: left !important; }
+  .homeDiaHoyIzq > p .homeDiaHoyDer > p {
+    display: inline; }
+  .diaPorDia > div > span, .diaPorDia > div > div > span {
+    font-size: 0.8em !important; }
+  .imgDiaPorDia {
+    width: 28px; }
+  .diaMes > h3, .diaMes > div > h3, .diaMes > div > span {
+    font-size: 0.7em !important;
+    display: block !important; }
+  .diaMes > div > img {
+    width: 25px  !important;
+    display: block !important; }
+  .footer {
+    display: none; } }
